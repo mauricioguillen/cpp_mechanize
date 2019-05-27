@@ -27,7 +27,7 @@ class Cookies{
 
 	public:
 		bool  activate_cookies;	
-		string file;
+		string file;
 		int autosave;
 
 };
