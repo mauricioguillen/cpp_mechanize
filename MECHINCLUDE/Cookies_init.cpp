@@ -1,0 +1,6 @@
+Cookies Cookies::init(){
+
+
+
+
+}

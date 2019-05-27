@@ -10,6 +10,7 @@ static size_t write_response(void *curl,size_t size,size_t count,void *response)
 return size*count;
 }
 
+
 class Response{
 
 	public:
@@ -19,9 +20,15 @@ class Response{
 };
 
 class Cookies{
-	
+
+	public:
+
+	static Cookies init();	
+
 	public:
 		bool  activate_cookies;	
+		string file;
+		int autosave;
 
 };
 
@@ -39,9 +46,11 @@ class Mechanize{
 	
 	public:
 		Response get(const char *url);
+		
 
 
 
 };
 
-#include "MECHINCLUDE/get.cpp"
+#include "MECHINCLUDE/Mechanize_get.cpp"
+#include "MECHINCLUDE/Cookies_init.cpp"

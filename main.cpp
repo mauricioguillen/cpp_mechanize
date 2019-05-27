@@ -5,9 +5,11 @@ int main(){
 
 Mechanize mech;
 
-Response response;
+Cookies cookie = Cookies::init();
 
-response = mech.get("https://www.google.com");
+mech.cookie_jar();
+
+Response response = mech.get("https://www.google.com");
 
 cout << response.response << "\n";
 
